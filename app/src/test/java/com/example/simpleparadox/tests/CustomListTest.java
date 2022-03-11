@@ -23,6 +23,13 @@ public class CustomListTest {
         int listSize = list.getCount();
         list.addCity(new City("Halifax", "NS"));
         Assert.assertEquals(list.getCount(), listSize + 1);
-
     }
+    @Test
+    public void hasCityTest() {
+        int listSize = list.getCount();
+        City city = new City("Halifax","NS");
+        list.addCity(city);
+        Assert.assertEquals(list.hasCity(city), true);
+    }
+
 }
